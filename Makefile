@@ -4,5 +4,5 @@ build:
 	docker-compose -f docker-compose.yml build app
 push:
 	docker-compose -f docker-compose.yml push app
-test:
+ci:
 	docker-compose -f docker-compose.yml up --abort-on-container-exit
