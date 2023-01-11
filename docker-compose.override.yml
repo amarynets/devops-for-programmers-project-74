@@ -18,4 +18,4 @@ services:
     volumes:
       - $PWD/services/caddy/Caddyfile:/etc/caddy/Caddyfile
     depends_on:
-      - app
+      - "app"
