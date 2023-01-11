@@ -1,11 +1,11 @@
 version: "3.8"
 services:
   app:
-    build:
+    build: 
       context: .
       dockerfile: Dockerfile
-    command: npm run dev
     ports:
       - "8080:8080"
+    command: bash -c 'sleep 3 && npm install --save sequelize-cli && npm start'
     volumes:
-      - "./app:/app"
+      - ./app:/app

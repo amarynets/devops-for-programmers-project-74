@@ -5,7 +5,4 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.production
-    ports:
-      - "8080:8080"
-    volumes:
-      - "./app:/app"
+    command: bash -c 'sleep 3 && npm test'
