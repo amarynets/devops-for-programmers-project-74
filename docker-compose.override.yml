@@ -9,3 +9,13 @@ services:
     command: bash -c 'sleep 3 && npm install --save sequelize-cli && npm start'
     volumes:
       - ./app:/app
+  caddy:
+    image: caddy
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - $PWD/services/caddy/Caddyfile:/etc/caddy/Caddyfile
+    depends_on:
+      - app
