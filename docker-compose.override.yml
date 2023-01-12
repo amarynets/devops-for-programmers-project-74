@@ -6,11 +6,11 @@ services:
       dockerfile: Dockerfile
     ports:
       - "8080:8080"
-    command: bash -c 'sleep 3 && npm install --save sequelize-cli && npm start'
+    command: bash -c 'sleep 3 && npm start'
     volumes:
       - ./app:/app
   caddy:
-    image: caddy
+    image: caddy:2.6
     restart: unless-stopped
     ports:
       - "80:80"

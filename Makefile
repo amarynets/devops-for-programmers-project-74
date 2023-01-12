@@ -6,3 +6,5 @@ push:
 	docker-compose -f docker-compose.yml push app
 ci:
 	docker-compose -f docker-compose.yml up --abort-on-container-exit
+env:
+	cp .env.example .env
